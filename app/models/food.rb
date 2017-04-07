@@ -5,7 +5,7 @@ class Food < ActiveRecord::Base
     ).round(2)
   end
 
-  JSON_KEYS = %w{description kcal fat_g carbohydrate_g protein_g}
+  JSON_KEYS = %w{description kcal protein_g fat_g carbohydrate_g fiber_td_g sugar_g}
   def as_json(opts = {})
     super.tap do |e|
       e['fat_g'] = fat_g

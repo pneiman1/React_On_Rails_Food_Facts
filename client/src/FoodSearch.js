@@ -58,6 +58,9 @@ class FoodSearch extends React.Component {
         <td className='right aligned'>{food.protein_g}</td>
         <td className='right aligned'>{food.fat_g}</td>
         <td className='right aligned'>{food.carbohydrate_g}</td>
+        <td className='right aligned'>{food.fiber_td_g}</td>
+        <td className='right aligned'>{food.sugar_g}</td>
+
       </tr>
     ));
 
@@ -66,7 +69,7 @@ class FoodSearch extends React.Component {
         <table className='ui selectable structured large table'>
           <thead>
             <tr>
-              <th colSpan='5'>
+              <th colSpan='9'>
                 <div className='ui fluid search'>
                   <div className='ui icon input'>
                     <input
@@ -88,10 +91,14 @@ class FoodSearch extends React.Component {
             </tr>
             <tr>
               <th className='eight wide'>Description</th>
-              <th>Kcal</th>
-              <th>Protein (g)</th>
-              <th>Fat (g)</th>
-              <th>Carbs (g)</th>
+
+              <th>Calories</th>
+              <th>Protein(g)</th>
+              <th>Fat(g)</th>
+              <th>Carbs(g)</th>
+              <th>Fiber(g)</th>
+              <th>Sugar(g)</th>
+
             </tr>
           </thead>
           <tbody>

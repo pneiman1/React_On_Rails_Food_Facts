@@ -13,6 +13,8 @@ export default function SelectedFoods(props) {
       <td className='right aligned'>{food.protein_g}</td>
       <td className='right aligned'>{food.fat_g}</td>
       <td className='right aligned'>{food.carbohydrate_g}</td>
+      <td className='right aligned'>{food.fiber_td_g}</td>
+      <td className='right aligned'>{food.sugar_g}</td>
     </tr>
   ));
 
@@ -20,16 +22,18 @@ export default function SelectedFoods(props) {
     <table className='ui selectable structured large table'>
       <thead>
         <tr>
-          <th colSpan='5'>
+          <th colSpan='7'>
             <h3>Selected foods</h3>
           </th>
         </tr>
         <tr>
           <th className='eight wide'>Description</th>
-          <th>Kcal</th>
-          <th>Protein (g)</th>
-          <th>Fat (g)</th>
-          <th>Carbs (g)</th>
+          <th>Calories</th>
+          <th>Protein(g)</th>
+          <th>Fat(g)</th>
+          <th>Carbs(g)</th>
+          <th>Fiber(g)</th>
+          <th>Sugar(g)</th>
         </tr>
       </thead>
       <tbody>
@@ -61,6 +65,19 @@ export default function SelectedFoods(props) {
             id='total-carbohydrate_g'
           >
             {sum(foods, 'carbohydrate_g')}
+          </th>
+
+          <th
+            className='right aligned'
+            id='total-fiber_td_g'
+          >
+            {sum(foods, 'fiber_td_g')}
+          </th>
+          <th
+            className='right aligned'
+            id='total-sugar_g'
+          >
+            {sum(foods, 'sugar_g')}
           </th>
         </tr>
       </tfoot>
