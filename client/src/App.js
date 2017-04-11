@@ -19,6 +19,8 @@ class App extends Component {
     this.setState({ selectedFoods: newFoods });
   }
 
+
+
   render() {
     const { selectedFoods } = this.state;
 
